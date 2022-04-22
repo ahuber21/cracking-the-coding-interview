@@ -34,10 +34,10 @@ public:
 
     T peek()
     {
-        if (removing)
-            move_to_push();
+        if (!removing)
+            move_to_pop();
 
-        return push.peek();
+        return pop.peek();
     }
 
 protected:
